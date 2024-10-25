@@ -6,12 +6,12 @@ body{
     text-align: center;
 }
 #form {
-    width: 500px;
-    margin: auto;
+    width: 400px;
+    margin-left: auto;
     background: rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding: 100px;
+    padding: 50px;
     text-align: center;
     & button{
         background-color: black;
@@ -38,4 +38,10 @@ body{
             margin: auto;
         }
     }
+}
+#result {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
 }
