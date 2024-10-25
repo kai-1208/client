@@ -1,11 +1,12 @@
 // main.js
 import { sendDataToServer } from './class.js';
 // const sample = new sample();
-var i = 0;
+let i = 0;
 const contentLists = {};
 
 document.addEventListener("DOMContentLoaded", () => {
     // const contentList = [];
+    const button1 = document.getElementById("button1");
     button1.addEventListener("click", function() {
         i++;
         contentLists[i] = [];
@@ -23,9 +24,37 @@ document.addEventListener("DOMContentLoaded", () => {
         contentLists[i].push(message1);
         contentLists[i].push(message2);
         console.log(i + ":"+ contentLists[i]);
+
         text1.value = "";
         text2.value = "";
-        sendDataToServer(contentLists);
+
+        // const resultDiv = document.getElementById("result");
+
+        // const newContent = document.createElement('div');
+        // newContent.id = "id" + i
+        // const content1 = contentLists[i][0];
+        // const content2 = contentLists[i][1];
+        // newContent.textContent = `単語: ${content1}, 意味: ${content2}`;
+        // resultDiv.appendChild(newContent);
+
+        sendDataToServer(contentLists)
+        .then(data => {
+            if (data.status === "success") {
+                // console.log(data);
+                const resultDiv = document.getElementById("result");
+
+                const newContent = document.createElement('div');
+                newContent.id = "id" + i;
+                const content1 = contentLists[i][0];
+                const content2 = contentLists[i][1];
+                newContent.textContent = `単語: ${content1}, 意味: ${content2}`;
+                resultDiv.appendChild(newContent);
+            }else{
+                // console.error(data);
+            }
+        });
+        document.addEventListener("click", () => {
+            
+        });
     });
-    
 });

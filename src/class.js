@@ -1,7 +1,7 @@
 // class.js
 export function sendDataToServer(contentLists) {
     const jsonData = JSON.stringify(contentLists);
-    fetch('http://localhost:PORT/api/data',{
+    return fetch('http://localhost:PORT/api/data',{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -10,9 +10,12 @@ export function sendDataToServer(contentLists) {
     })
     .then(responce =>{
         if(!responce.ok){
-            return responce.json();
+            throw new Error("レスポンスが不正です");
         }
+        return responce.json();
     })
-    .then(data => console.log(data))
+    .then(data => {
+        return data;
+    })
     .catch((error) => console.log(error));
 }
