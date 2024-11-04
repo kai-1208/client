@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(i + ":"+ contentLists[i]);
         text1.value = "";
         text2.value = "";
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> a1e07d1741c22c2d599a1fc1be74cd30c6fde499
         // const wordDiv = document.getElementById("word");
         // const meaningDiv = document.getElementById("meaning");
         // // const resultDiv = document.getElementById("result");
@@ -46,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // wordDiv.appendChild(wordContent);
         // meaningDiv.appendChild(meaningContent);
         // // resultDiv.appendChild(newContent);
+<<<<<<< HEAD
         // wordContent.addEventListener("click", function() {
         //     const newContent1 = prompt("単語を編集してください：", content1);
         //     if (newContent1 !== null && newContent1.replace(/[\s\u3000]/g, "") !== "") {
@@ -60,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
         //         meaningContent.textContent = `${i}: ${newContent2}`;
         //     }
         // });
+=======
+>>>>>>> a1e07d1741c22c2d599a1fc1be74cd30c6fde499
         sendDataToServer(contentLists)
         .then(data => {
             if (data.status === "success") {
