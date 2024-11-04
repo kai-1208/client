@@ -29,23 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
         text1.value = "";
         text2.value = "";
 
-        const wordDiv = document.getElementById("word");
-        const meaningDiv = document.getElementById("meaning");
-        // const resultDiv = document.getElementById("result");
-        const wordContent = document.createElement('div');
-        const meaningContent = document.createElement('div');
-        // const newContent = document.createElement('div');
-        wordContent.id = "id" + i;
-        meaningContent.id = "id" + i;
-        // newContent.id = "id" + i
-        const content1 = contentLists[i][0];
-        const content2 = contentLists[i][1];
-        wordContent.textContent = `${i}: ${content1}`;
-        meaningContent.textContent = `${i}: ${content2}`;
-        // newContent.textContent = `単語: ${content1}, 意味: ${content2}`;
-        wordDiv.appendChild(wordContent);
-        meaningDiv.appendChild(meaningContent);
-        // resultDiv.appendChild(newContent);
+        // const wordDiv = document.getElementById("word");
+        // const meaningDiv = document.getElementById("meaning");
+        // // const resultDiv = document.getElementById("result");
+        // const wordContent = document.createElement('div');
+        // const meaningContent = document.createElement('div');
+        // // const newContent = document.createElement('div');
+        // wordContent.id = "id" + i;
+        // meaningContent.id = "id" + i;
+        // // newContent.id = "id" + i
+        // const content1 = contentLists[i][0];
+        // const content2 = contentLists[i][1];
+        // wordContent.textContent = `${i}: ${content1}`;
+        // meaningContent.textContent = `${i}: ${content2}`;
+        // // newContent.textContent = `単語: ${content1}, 意味: ${content2}`;
+        // wordDiv.appendChild(wordContent);
+        // meaningDiv.appendChild(meaningContent);
+        // // resultDiv.appendChild(newContent);
         sendDataToServer(contentLists)
         .then(data => {
             if (data.status === "success") {
