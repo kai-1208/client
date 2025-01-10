@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    text-align: center;
+    color: white;
+}
+#dictionary {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* font-size: 20px; */
+}
+#word div, #meaning div {
+    padding: 20px;
+    margin: 0 50px;
+    cursor: pointer;
+    background: none;
+    color: white;
+}
+.clicked {
+    background: lime;
+    color: lime;
+}

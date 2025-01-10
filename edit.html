@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dictionary</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="module" src="src/main.js" defer></script>
+    <title>Edit</title>
+    <link rel="stylesheet" href="edit.css">
+    <script type="module" src="src/edit.js" defer></script>
 </head>
 <body>
+    <!-- <div id="description"></div> -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <p>単語帳を選択してください</p>
+            <div id="vocabularyList"></div>
+        </div>
+    </div>
     <div id="form">
         <div>
             <h2>単語入力フォーム</h2>
@@ -17,7 +25,7 @@
             <h2>意味入力フォーム</h2>
             <input type="text" id="content2" placeholder="入力してください">
         </div>
-        <button id="button1">送信</button>
+        <button id="button1">追加</button>
     </div>
     <div id="result">
         <h2>単語帳</h2>
@@ -29,7 +37,7 @@
                 <h3>意味</h3>
             </div>
         </div>
-        <button id="button2">追加</button>
+        <button id="button2">保存</button>
     </div>
 </body>
 </html>
