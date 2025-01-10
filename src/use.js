@@ -3,6 +3,7 @@ import { fetchDataFromServer } from './class.js';
 document.addEventListener("DOMContentLoaded", () => {
     const wordDiv = document.getElementById("word");
     const meaningDiv = document.getElementById("meaning");
+    const button3 = document.getElementById("button3");
 
     const displayData = (data) => {
         wordDiv.innerHTML = ""; // 既存の内容をクリア
@@ -44,5 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(error => {
         console.error("サーバーからのデータ取得中にエラーが発生しました:", error);
+    });
+
+    button3.addEventListener("click", () => {
+        window.location.href = "./edit.html";
     });
 });
