@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 contentLists = {};
                 displayData([]);
                 console.log("単語帳のデータを消去しました。");
-                window.location.href = "./index.html"; // リダイレクト
+                window.location.href = "./use.html"; // リダイレクト
             } else {
                 console.error("サーバーからのレスポンスが失敗しました。");
             }
