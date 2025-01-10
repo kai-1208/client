@@ -8,7 +8,10 @@
     <script type="module" src="src/edit.js" defer></script>
 </head>
 <body>
-    <!-- <div id="description"></div> -->
+    <div id="description">
+        <h1>Edit</h1>
+        <button id="button4">Topに戻る</button>
+    </div>
     <div id="lightbox" class="lightbox">
         <div class="lightbox-content">
             <span class="close">&times;</span>
@@ -16,28 +19,31 @@
             <div id="vocabularyList"></div>
         </div>
     </div>
-    <div id="form">
-        <div>
-            <h2>単語入力フォーム</h2>
-            <input type="text" id="content1" placeholder="入力してください">
-        </div>
-        <div>
-            <h2>意味入力フォーム</h2>
-            <input type="text" id="content2" placeholder="入力してください">
-        </div>
-        <button id="button1">追加</button>
-    </div>
-    <div id="result">
-        <h2>単語帳</h2>
-        <div>
-            <div id="word">
-                <h3>単語</h3>
+    <div class="flexContainer">
+        <div id="form">
+            <div>
+                <h2>単語入力フォーム</h2>
+                <input type="text" id="content1" placeholder="入力してください">
             </div>
-            <div id="meaning">
-                <h3>意味</h3>
+            <div>
+                <h2>意味入力フォーム</h2>
+                <input type="text" id="content2" placeholder="入力してください">
             </div>
+            <button id="button1">追加</button>
         </div>
-        <button id="button2">保存してUseに進む</button>
+        <div id="result">
+            <h2>単語帳</h2>
+            <div>
+                <div id="word">
+                    <h3>単語</h3>
+                </div>
+                <div id="meaning">
+                    <h3>意味</h3>
+                </div>
+            </div>
+            <button id="button2">保存してUseに進む</button>
+        </div>
     </div>
+    
 </body>
 </html>

@@ -7,6 +7,7 @@ let selectedVocabulary = null;
 document.addEventListener("DOMContentLoaded", () => {
     const button1 = document.getElementById("button1");
     const button2 = document.getElementById("button2");
+    const button4 = document.getElementById("button4");
     const text1 = document.getElementById("content1");
     const text2 = document.getElementById("content2");
 
@@ -173,6 +174,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => {
             console.error("サーバーへの送信中にエラーが発生しました:", error);
         });
+    });
+
+    // ここでtopに戻ります
+    button4.addEventListener("click", function() {
+        window.location.href = "http://localhost:3000/masadanikick";
     });
 
     const texts = [text1, text2];
